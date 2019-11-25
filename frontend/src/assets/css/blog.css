@@ -1,0 +1,121 @@
+
+.blog-content {
+    margin-top: 150px;
+    margin-left: 400px;
+    margin-right: 20%;
+}
+
+.admin {
+    float: left;
+    margin-top: 150px;
+    margin-left: 15px;
+    position: absolute;
+    left: 0;
+}
+
+.post.new {
+    background-color: lightyellow;
+    margin-bottom: 100px;
+    z-index: 100;
+    font-weight: 800;
+}
+
+.post.error {
+    background-color: lightcoral;
+    margin-bottom: 100px;
+    z-index: 100;
+    font-weight: 800;
+}
+
+.post.success {
+    background-color: lightgreen;
+    margin-bottom: 100px;
+    z-index: 100;
+    font-weight: 800;
+}
+
+.post.warning {
+    background-color: lightgoldenrodyellow;
+    margin-bottom: 100px;
+    z-index: 100;
+    font-weight: 800;
+}
+
+.post {
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(0, 0, 0, 0.9);
+    color: #4a4a4a;
+    display: block;
+    background-color: #fff;
+    padding: 15px;
+    margin: 0 0 25px 0;
+    word-break: break-word;
+    position: relative;
+    text-align: left;
+}
+
+.blogName {
+    text-transform: capitalize;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 25px 155px 25px 25px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.content {
+    padding-top: 20px;
+    background-color: rgba(10, 25, 34, 0.8);
+    padding-bottom: 40px;
+}
+
+.post-date {
+    float: right;
+    top: -15px;
+    position: relative;
+    font-size: 11px;
+}
+
+.button {
+    background-color: #fff;
+    border-color: #dbdbdb;
+    border-width: 1px;
+    color: #363636;
+    justify-content: center;
+    padding: calc(.375em - 1px) .75em;
+    text-align: center;
+    white-space: nowrap;
+    cursor: inherit;
+}
+
+
+.overlay {
+    position: fixed;
+    transition: all 0.3s;
+    background-color: rgba(0, 0, 0, 0.75);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: smaller;
+    margin-right: 25px;
+}
+
+.login {
+    position: absolute;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    bottom: 0;
+}
+#loginPassword {
+    border-color: black;
+    border-style: dotted;
+}

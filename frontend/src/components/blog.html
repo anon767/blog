@@ -1,0 +1,44 @@
+<div class="content" xmlns:v-on="http://www.w3.org/1999/xhtml">
+    <div class="blogName">{{ blog.id }}</div>
+
+    <div class="admin">
+        <addPostForm button-text="Create Post" v-if="authorized()"/>
+    </div>
+    <div class="blog-content">
+        <div>
+            <div class="post error" v-if="statusMessage.error.length > 0" v-html="compile(statusMessage.error)"></div>
+            <div class="post success" v-if="statusMessage.success.length > 0"
+                 v-html="compile(statusMessage.success)"></div>
+            <div class="post warning" v-if="statusMessage.warning.length > 0"
+                 v-html="compile(statusMessage.warning)"></div>
+            <div v-if="isNew && !noClaimIntended">
+                <div class="overlay"></div>
+                <div class="post new">
+                    <div class="post-content"> This Blog is not taken yet! <a href="#" id="claim_spoiler">Claim</a>
+                        ownership!
+                    </div>
+                    <br>
+                    <p class="close"><a href="#" v-on:click="noClaimIntended=true">x</a></p>
+                    <div class="register">
+                        <input class="password" type="password" placeholder="password" id="reg_password"
+                               v-model="blog.token"
+                               v-on:keyup.enter="register()"/>
+                        <input type="button" class="button" value="Submit" v-on:click="register()">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="post" v-for="post in posts">
+            <div class="post-content" v-html="compile(post.content)"></div>
+            <p class="post-date">{{ post.date }}</p>
+        </div>
+    </div>
+    <div class="login" v-if="!authorized() && !isNew">
+        <input type="password" id="loginPassword" v-model="blog.token" placeholder="set password" v-on:keyup.enter="login()"/>
+    </div>
+</div>
+
+</div>
+
+
