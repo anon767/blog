@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@types/marked": "^0.6.5",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "core-js": "^2.6.5",
-    "marked": "^0.7.0",
+    "marked": "^4.0.10",
     "moment": "^2.24.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
@@ -22,9 +22,9 @@
     "webpack-stream": "^5.2.1"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-typescript": "^3.6.0",
-    "@vue/cli-service": "^3.6.0",
+    "@vue/cli-service": "^5.0.8",
     "typescript": "^3.4.3",
     "vue-template-compiler": "^2.5.21"
   }
